@@ -1,0 +1,103 @@
+.form{
+    width: 100%;
+    height: 518px;
+    background: url(../images/bg-form.png) center / cover no-repeat;
+    @media (max-width: 1023px){
+        height: 760px;
+    }
+    .layout{
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+    &__wrapper{
+        display: flex;
+        gap: 60px;
+        position: absolute;
+        top: 88px;
+        left: 50%;
+        z-index: 2;
+        @media (max-width: 1514px){
+            left: 27%;
+        }
+        @media (max-width: 1023px){
+            flex-direction: column;
+            align-items: center;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 767px){
+            gap: 30px;
+        }
+    }
+    &__left{
+        width: 368px;
+        @media (max-width: 1023px){
+            text-align: center;
+        }
+        @media (max-width: 767px){
+            width: 100%;
+        }
+    }
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__text{
+        width: 215px;
+        @media (max-width: 1023px){
+            width: 100%;
+        }
+    }
+    &__right{
+        width: 287px;
+        .btn{
+            width: 287px;
+            height: 75px;
+            background: #FAC232;
+            border-radius: 38px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 75px;
+            text-align: center;
+            color: #251404;
+            border: none;
+            margin-bottom: 10px;
+        }
+        p{
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 15px;
+            letter-spacing: 0.06em;
+            color: $color2;
+            text-align: center;
+            a{
+                color: $color3;
+            }
+        }
+    }
+    &__input{
+        display: block;
+        width: 287px;
+        height: 75px;
+        border: 3px solid #D0DCE3;
+        border-radius: 38px;
+        padding: 25px 33px;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 0.06em;
+        color: #A6B0B9;
+        &::placeholder{
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.06em;
+            color: #A6B0B9;
+        }
+        &:first-child{
+            margin-bottom: 15px;
+        }
+        &:nth-child(2){
+            margin-bottom: 30px;
+        }
+    }
+}
